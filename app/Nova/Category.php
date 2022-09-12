@@ -46,7 +46,7 @@ class Category extends Resource
             // ID::make(__('ID'), 'id')->sortable(),
             Text::make('العنوان', 'title')->rules('required'),
             Boolean::make('قابل للاستخدام كمادة اوليّة', 'is_material')->rules('required'),
-            Image::make('صورة المنتج', 'cover')->rules('required'),
+            Image::make('صورة المنتج', 'cover')->creationRules('required'),
 
         ];
     }

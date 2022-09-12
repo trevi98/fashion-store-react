@@ -1,3 +1,18 @@
 form .card {
     direction: rtl;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+.font-arabic {
+    font-family: 'Tajawal', sans-serif !important; 
+}
+
+[data-testid="resource-table"] {
+    direction: rtl;
+}
+
+th > span > svg {
+    margin-left: 0 !important;
+    margin-right: .5rem !important;
+}
