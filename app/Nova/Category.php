@@ -44,9 +44,9 @@ class Category extends Resource
     {
         return [
             // ID::make(__('ID'), 'id')->sortable(),
-            Text::make('Title', 'title')->rules('required'),
-            Boolean::make('Is Material', 'is_material')->rules('required'),
-            Image::make('Product Image', 'cover')->rules('required'),
+            Text::make('العنوان', 'title')->rules('required'),
+            Boolean::make('قابل للاستخدام كمادة اوليّة', 'is_material')->rules('required'),
+            Image::make('صورة المنتج', 'cover')->rules('required'),
 
         ];
     }
@@ -93,5 +93,15 @@ class Category extends Resource
     public function actions(Request $request)
     {
         return [];
+    }
+ 
+    public static function singularLabel()
+    {
+        return 'قسم';
+    }
+
+    public static function label()
+    {
+        return 'الأقسام';
     }
 }

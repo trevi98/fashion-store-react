@@ -42,21 +42,21 @@ class User extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make()->sortable(),
+            // ID::make()->sortable(),
 
             Gravatar::make()->maxWidth(50),
 
-            Text::make('Name')
+            Text::make('الأسم','name')
                 ->sortable()
                 ->rules('required', 'max:255'),
 
-            Text::make('Email')
+            Text::make('البريد الألكتروني','email')
                 ->sortable()
                 ->rules('required', 'email', 'max:254')
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
 
-            Password::make('Password')
+            Password::make('كلمة المرور','password')
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:8')
                 ->updateRules('nullable', 'string', 'min:8'),
@@ -105,5 +105,15 @@ class User extends Resource
     public function actions(Request $request)
     {
         return [];
+    }
+
+    public static function singularLabel()
+    {
+        return 'مستخدم';
+    }
+
+    public static function label()
+    {
+        return 'المستخدمين';
     }
 }
