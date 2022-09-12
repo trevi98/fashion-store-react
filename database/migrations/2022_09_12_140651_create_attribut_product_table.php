@@ -13,7 +13,7 @@ class CreateAttributProductTable extends Migration
      */
     public function up()
     {
-        Schema::create('    ', function (Blueprint $table) {
+        Schema::create('attribut_product', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->foreignId('attribut_id')->constrained()->onDelete('cascade');
