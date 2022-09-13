@@ -54,7 +54,7 @@ class Product extends Resource
             Flexible::make('صور المنتج', 'imgs')
             ->addLayout('صورة', 'img', [
                 Image::make('', 'image'),
-            ])->limit(5),
+            ])->button('إضافة صورة')->limit(5),
             Number::make('سعر','price')->rules('required'),
             Boolean::make('امكانية العرض','show')->default(true),
             Boolean::make('منتج المميز','featured')->default(false),
