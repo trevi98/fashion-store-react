@@ -61,6 +61,16 @@ class Setting extends Resource
         ];
     }
 
+    public function fieldsForIndex(Request $request)
+    {
+        return [
+            Text::make('عنوان', function(){
+                return 'الاعدادات العامة';
+            }),
+        ];
+    }
+
+
     /**
      * Get the cards available for the request.
      *
