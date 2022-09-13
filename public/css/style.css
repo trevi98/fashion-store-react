@@ -16,3 +16,53 @@ th > span > svg {
     margin-left: 0 !important;
     margin-right: .5rem !important;
 }
+
+.card > .flex.items-center.py-3.border-b.border-50 {
+    direction: rtl;
+}
+
+
+v-popover.ml-auto {
+    margin-left: auto;
+}
+
+.ml-auto {
+    margin-left: 0 !important;
+    margin-right: auto;
+}
+
+.ml-2 {
+    margin-left: 0 !important;
+    margin-right: 0.5rem;
+}
+
+.mr-4 {
+    margin-right: 0 !important;
+    margin-left: 1rem;
+}
+
+.sidebar-icon {
+    margin-right: 0rem !important;
+    margin-left: 0.75rem !important;
+}
+
+.mr-6 {
+    margin-right: 0rem !important;
+    margin-left: 1.5rem !important;
+}
+
+.mr-3 {
+    margin-right: 0rem !important;
+    margin-left: .75rem !important;
+}
+
+.pl-search {
+    padding-left: 0 !important;
+    padding-right: 2.75rem !important;
+}
+
+.ml-3 {
+    margin-right: .75rem !important;
+    margin-left: 0 !important;
+}
+
