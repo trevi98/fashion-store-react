@@ -27,7 +27,6 @@ return array(
     'App\\Models\\Order' => $baseDir . '/app/Models/Order.php',
     'App\\Models\\Policy' => $baseDir . '/app/Models/Policy.php',
     'App\\Models\\Product' => $baseDir . '/app/Models/Product.php',
-    'App\\Models\\Product_img' => $baseDir . '/app/Models/Product_img.php',
     'App\\Models\\Review' => $baseDir . '/app/Models/Review.php',
     'App\\Models\\Setting' => $baseDir . '/app/Models/Setting.php',
     'App\\Models\\Sub_category' => $baseDir . '/app/Models/Sub_category.php',
