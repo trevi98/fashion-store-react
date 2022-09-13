@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->text('description')->nullable();
             $table->text('cover');
             $table->longText('imgs')->nullable();
+            $table->longText('atts')->nullable();
             $table->string('price');
             $table->integer('show')->default(1);
             $table->integer('featured')->default(0);

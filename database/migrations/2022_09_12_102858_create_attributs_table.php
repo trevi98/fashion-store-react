@@ -17,7 +17,7 @@ class CreateAttributsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
-            $table->integer('type');
+            // $table->integer('type');
         });
     }
 

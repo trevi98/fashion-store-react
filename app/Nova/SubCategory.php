@@ -5,19 +5,21 @@ namespace App\Nova;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Image;
-use Laravel\Nova\Fields\Select;
+use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class Attribut extends Resource
+class SubCategory extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Attribut::class;
+    public static $model = \App\Models\Sub_category::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -45,11 +47,10 @@ class Attribut extends Resource
     {
         return [
             // ID::make(__('ID'), 'id')->sortable(),
-            Text::make('عنوان','title')->rules('required'),
-            // Select::make('نوع', 'type')->options([
-            //     '1' => 'صورة',
-            //     '2' => 'نص',
-            // ])->rules('required'),
+            Text::make('عنوان', 'title')->rules('required'),
+            BelongsTo::make('القسم','category','App\Nova\Category'),
+            Image::make('صورة', 'cover')->rules('required'),
+
         ];
     }
 
@@ -99,11 +100,11 @@ class Attribut extends Resource
 
     public static function singularLabel()
     {
-        return 'خاصّة';
+        return 'قسم فرعي';
     }
 
     public static function label()
     {
-        return 'الخواصّ';
+        return 'الأقسام الفرعية';
     }
 }
