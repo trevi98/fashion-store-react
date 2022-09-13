@@ -56,6 +56,11 @@ v-popover.ml-auto {
     margin-left: .75rem !important;
 }
 
+.mr-2 {
+    margin-right: 0rem !important;
+    margin-left: .5rem !important;
+}
+
 .pl-search {
     padding-left: 0 !important;
     padding-right: 2.75rem !important;
@@ -68,9 +73,27 @@ v-popover.ml-auto {
 
 
 [x-placement="bottom-start"] {
-    left: 225px !important;
+    left: 100px !important;
 }
 
+[x-placement="bottom-end"] {
+    left: -160px !important;
+}
+
+
+[x-placement="bottom-start"] > div > div > div > div:nth-child(1) {
+    width: 200px !important;
+}
+
+.toasted-container.bottom-right {
+    left: 5% !important;
+    right: unset !important;
+}
+
+.vue-star-rating {
+    justify-content: flex-end;
+    direction: ltr;
+}
 
 
 @media (max-width: 992px) {
@@ -82,5 +105,13 @@ v-popover.ml-auto {
     html:not([dir="rtl"]) .hamburger-menu {
         margin-right: 0rem !important;
         margin-left: 1rem !important;
+    }
+
+    [x-placement="bottom-start"] > div > div > div > div:nth-child(1) {
+        width: 130px !important;
+    }
+
+    [x-placement="bottom-end"] {
+        left: -190px !important;
     }
 }

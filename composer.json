@@ -14,7 +14,8 @@
         "laravel/nova": "*",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "3.*"
+        "laravel/ui": "3.*",
+        "nikaia/nova-rating-field": "^1.0"
     },
     "repositories": [
         {
