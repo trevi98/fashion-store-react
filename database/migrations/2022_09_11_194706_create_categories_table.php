@@ -18,7 +18,6 @@ class CreateCategoriesTable extends Migration
             $table->timestamps();
             $table->string('title');
             $table->text('cover');
-            $table->integer('is_material')->default(0);
         });
     }
 
