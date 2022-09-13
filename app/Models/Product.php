@@ -26,9 +26,6 @@ class Product extends Model
         return $this->hasMany(Review::class);
     }
 
-    public function product_img(){
-        return $this->hasMany(Product_img::class);
-    }
 
     public function sub_category(){
         return $this->belongsTo(Sub_category::class);
