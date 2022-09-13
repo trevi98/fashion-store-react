@@ -11,18 +11,16 @@ use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Image;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\Number;
-use Whitecube\NovaFlexibleContent\Flexible;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use App\Models\Attribut;
 
-class Product extends Resource
+class About extends Resource
 {
     /**
      * The model the resource corresponds to.
      *
      * @var string
      */
-    public static $model = \App\Models\Product::class;
+    public static $model = \App\Models\About::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
@@ -47,37 +45,27 @@ class Product extends Resource
      * @return array
      */
     public function fields(Request $request)
-    {   
-        $attributes = Attribut::all()->pluck('title','id');
-        // return dd(request()->resourceId);
-        if (!is_null(request()->resourceId)) {
-            $materialProducts = \App\Models\Product::where('id','<>',request()->resourceId)->where('is_material', 1)->get()->pluck('title','id');
-        }
-        else {
-            $materialProducts = \App\Models\Product::where('is_material', 1)->get()->pluck('title','id');
-        }
+    {
         return [
             // ID::make(__('ID'), 'id')->sortable(),
-            Text::make('عنوان', 'title')->rules('required'),
-            BelongsTo::make('النوع', 'sub_category', 'App\Nova\SubCategory'),
-            Boolean::make('قابل للاستخدام كمادة اوليّة', 'is_material')->rules('required'),
-            Textarea::make('شرح', 'description')->rules('required'),
-            Image::make('صروة المنتج الرئيسية','cover')->creationRules('required'),
-            Flexible::make('صور المنتج', 'imgs')
-            ->addLayout('صورة', 'img', [
-                Image::make('', 'image'),
-            ])->button('إضافة صورة')->limit(5),
-            Flexible::make('خصائص المنتج', 'atts')
-            ->addLayout('خاصّة', 'att', [
-                Select::make('الخاصّة','title')->options($attributes)->rules('required'),
-                Text::make('قيمة','value')->rules('required'),
-            ])
-            ->addLayout('مادة', 'material', [
-                Select::make('المادة','title')->options($materialProducts)->rules('required'),
-            ])->button('إضافة خاصّة'),
-            Number::make('سعر','price')->rules('required'),
-            Boolean::make('امكانية العرض','show')->default(true),
-            Boolean::make('منتج المميز','featured')->default(false),
+            Textarea::make('النص','text')->rules('required'),
+            Image::make('صورة','img')->creationRules('required'),
+
+        ];
+    }
+
+    public function fieldsForIndex(Request $request)
+    {
+        return [
+            // ID::make(__('ID'), 'id')->sortable(),
+            Text::make('النص',function(){
+                if (strlen($this->text) > 100) {
+                    return substr($this->text, 0, 100).' ...';  
+                }
+                return $this->text;
+            }),
+            Image::make('صورة','img'),
+
         ];
     }
 
@@ -125,14 +113,13 @@ class Product extends Resource
         return [];
     }
 
-    
     public static function singularLabel()
     {
-        return 'منتج';
+        return 'حول الموقع';
     }
 
     public static function label()
     {
-        return 'المنتجات';
+        return 'حول الموقع';
     }
 }
