@@ -47,7 +47,7 @@ class Product extends Resource
      * @return array
      */
     public function fields(Request $request)
-    {   
+    {
         $attributes = Attribut::all()->pluck('title','id');
         // return dd(request()->resourceId);
         if (!is_null(request()->resourceId)) {
@@ -61,7 +61,6 @@ class Product extends Resource
             Text::make('عنوان', 'title')->rules('required'),
             BelongsTo::make('النوع', 'sub_category', 'App\Nova\SubCategory'),
             Boolean::make('قابل للاستخدام كمادة اوليّة', 'is_material')->rules('required'),
-            
             Textarea::make('شرح', 'description')->rules('required'),
             Image::make('صروة المنتج الرئيسية','cover')->creationRules('required'),
             Flexible::make('صور المنتج', 'imgs')
@@ -79,6 +78,8 @@ class Product extends Resource
             Number::make('سعر','price')->rules('required'),
             Boolean::make('امكانية العرض','show')->default(true),
             Boolean::make('منتج المميز','featured')->default(false),
+            BelongsTo::make('اللون', 'color', 'App\Nova\Color'),
+
         ];
     }
 
@@ -126,7 +127,7 @@ class Product extends Resource
         return [];
     }
 
-    
+
     public static function singularLabel()
     {
         return 'منتج';

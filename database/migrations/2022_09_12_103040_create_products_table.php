@@ -25,6 +25,7 @@ class CreateProductsTable extends Migration
             $table->integer('show')->default(1);
             $table->integer('featured')->default(0);
             $table->foreignId('sub_category_id')->constrained()->onDelete('cascade');
+            $table->foreignId('color_id')->constrained()->onDelete('cascade');
             $table->integer('is_material')->default(0);
 
         });
