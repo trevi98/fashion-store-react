@@ -10,6 +10,7 @@ return array(
     'phpseclib3\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'bcmath_compat\\' => array($vendorDir . '/phpseclib/bcmath_compat/src'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
+    'Whitecube\\NovaFlexibleContent\\' => array($vendorDir . '/whitecube/nova-flexible-content/src'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'TijsVerkoyen\\CssToInlineStyles\\' => array($vendorDir . '/tijsverkoyen/css-to-inline-styles/src'),
     'Tests\\' => array($baseDir . '/tests'),

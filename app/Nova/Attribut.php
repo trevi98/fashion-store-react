@@ -44,7 +44,7 @@ class Attribut extends Resource
     {
         return [
             // ID::make(__('ID'), 'id')->sortable(),
-            Text::make('العنوان','title')->rules('required'),
+            Text::make('عنوان','title')->rules('required'),
         ];
     }
 

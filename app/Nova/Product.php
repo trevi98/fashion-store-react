@@ -4,6 +4,13 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\Image;
+use Laravel\Nova\Fields\Number;
+use Whitecube\NovaFlexibleContent\Flexible;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Product extends Resource
@@ -40,7 +47,17 @@ class Product extends Resource
     public function fields(Request $request)
     {
         return [
-            ID::make(__('ID'), 'id')->sortable(),
+            // ID::make(__('ID'), 'id')->sortable(),
+            Text::make('عنوان', 'title')->rules('required'),
+            Textarea::make('شرح', 'description')->rules('required'),
+            Image::make('صروة المنتج الرئيسية','cover')->rules('required'),
+            Flexible::make('صور المنتج', 'imgs')
+            ->addLayout('صورة', 'img', [
+                Image::make('', 'image'),
+            ])->limit(5),
+            Number::make('سعر','price')->rules('required'),
+            Boolean::make('امكانية العرض','show')->default(true),
+            Boolean::make('منتج المميز','featured')->default(false),
         ];
     }
 

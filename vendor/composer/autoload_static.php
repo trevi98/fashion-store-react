@@ -59,6 +59,7 @@ class ComposerStaticInit044026184457c9850706b2f68d6e9c44
         'W' => 
         array (
             'Whoops\\' => 7,
+            'Whitecube\\NovaFlexibleContent\\' => 30,
             'Webmozart\\Assert\\' => 17,
         ),
         'T' => 
@@ -219,6 +220,10 @@ class ComposerStaticInit044026184457c9850706b2f68d6e9c44
         'Whoops\\' => 
         array (
             0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Whitecube\\NovaFlexibleContent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
@@ -633,8 +638,11 @@ class ComposerStaticInit044026184457c9850706b2f68d6e9c44
         'App\\Models\\Setting' => __DIR__ . '/../..' . '/app/Models/Setting.php',
         'App\\Models\\Sub_category' => __DIR__ . '/../..' . '/app/Models/Sub_category.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Nova\\Attribut' => __DIR__ . '/../..' . '/app/Nova/Attribut.php',
         'App\\Nova\\Category' => __DIR__ . '/../..' . '/app/Nova/Category.php',
+        'App\\Nova\\Product' => __DIR__ . '/../..' . '/app/Nova/Product.php',
         'App\\Nova\\Resource' => __DIR__ . '/../..' . '/app/Nova/Resource.php',
+        'App\\Nova\\Review' => __DIR__ . '/../..' . '/app/Nova/Review.php',
         'App\\Nova\\User' => __DIR__ . '/../..' . '/app/Nova/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -6311,6 +6319,28 @@ class ComposerStaticInit044026184457c9850706b2f68d6e9c44
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',
         'Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',
+        'Whitecube\\NovaFlexibleContent\\Commands\\CreateCast' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Commands/CreateCast.php',
+        'Whitecube\\NovaFlexibleContent\\Commands\\CreateLayout' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Commands/CreateLayout.php',
+        'Whitecube\\NovaFlexibleContent\\Commands\\CreatePreset' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Commands/CreatePreset.php',
+        'Whitecube\\NovaFlexibleContent\\Commands\\CreateResolver' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Commands/CreateResolver.php',
+        'Whitecube\\NovaFlexibleContent\\Concerns\\HasFlexible' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Concerns/HasFlexible.php',
+        'Whitecube\\NovaFlexibleContent\\Concerns\\HasMediaLibrary' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Concerns/HasMediaLibrary.php',
+        'Whitecube\\NovaFlexibleContent\\FieldServiceProvider' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/FieldServiceProvider.php',
+        'Whitecube\\NovaFlexibleContent\\FileAdder\\FileAdder' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/FileAdder/FileAdder.php',
+        'Whitecube\\NovaFlexibleContent\\FileAdder\\FileAdderFactory' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/FileAdder/FileAdderFactory.php',
+        'Whitecube\\NovaFlexibleContent\\Flexible' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Flexible.php',
+        'Whitecube\\NovaFlexibleContent\\Http\\FlexibleAttribute' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Http/FlexibleAttribute.php',
+        'Whitecube\\NovaFlexibleContent\\Http\\Middleware\\InterceptFlexibleAttributes' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Http/Middleware/InterceptFlexibleAttributes.php',
+        'Whitecube\\NovaFlexibleContent\\Http\\ParsesFlexibleAttributes' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Http/ParsesFlexibleAttributes.php',
+        'Whitecube\\NovaFlexibleContent\\Http\\ScopedRequest' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Http/ScopedRequest.php',
+        'Whitecube\\NovaFlexibleContent\\Http\\TransformsFlexibleErrors' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Http/TransformsFlexibleErrors.php',
+        'Whitecube\\NovaFlexibleContent\\Layouts\\Collection' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Layouts/Collection.php',
+        'Whitecube\\NovaFlexibleContent\\Layouts\\Layout' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Layouts/Layout.php',
+        'Whitecube\\NovaFlexibleContent\\Layouts\\LayoutInterface' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Layouts/LayoutInterface.php',
+        'Whitecube\\NovaFlexibleContent\\Layouts\\Preset' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Layouts/Preset.php',
+        'Whitecube\\NovaFlexibleContent\\Value\\FlexibleCast' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Value/FlexibleCast.php',
+        'Whitecube\\NovaFlexibleContent\\Value\\Resolver' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Value/Resolver.php',
+        'Whitecube\\NovaFlexibleContent\\Value\\ResolverInterface' => __DIR__ . '/..' . '/whitecube/nova-flexible-content/src/Value/ResolverInterface.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',
         'Whoops\\Exception\\Frame' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Frame.php',

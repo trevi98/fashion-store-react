@@ -48,8 +48,8 @@ class Review extends Resource
     {
         return [
             // ID::make(__('ID'), 'id')->sortable(),
-            Textarea::make('التعليق','comment')->rules('required'),
-            Rating::make('التقييم','rating')->withStyles([
+            Textarea::make('تعليق','comment')->rules('required'),
+            Rating::make('تقييم','rating')->withStyles([
                 'star-size' => 30,
                 'active-color' => '#d4af37', // Primary nova theme color.
                 'border-width' => 0,
