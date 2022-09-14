@@ -44,8 +44,8 @@ class Color extends Resource
     {
         return [
             // ID::make(__('ID'), 'id')->sortable(),
-            Text::make('الاسم','title'),
-            ColorInput::make('القيمة','hex')->displayAs('hex8')->saveAs('hex8'),
+            Text::make('الاسم','title')->rules('required'),
+            ColorInput::make('القيمة','hex')->displayAs('hex8')->saveAs('hex8')->rules('required'),
             HasMany::make('منتجات','product','\App\Nova\Product'),
         ];
     }
