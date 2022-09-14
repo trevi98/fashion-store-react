@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Laravel\Nova\Fields\HasMany;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;
+use OptimistDigital\NovaColorField\Color as ColorInput;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Color extends Resource
@@ -44,7 +45,7 @@ class Color extends Resource
         return [
             // ID::make(__('ID'), 'id')->sortable(),
             Text::make('الاسم','title'),
-            Text::make('القيمة','hex'),
+            ColorInput::make('القيمة','hex')->displayAs('hex8')->saveAs('hex8'),
             HasMany::make('منتجات','product','\App\Nova\Product'),
         ];
     }
