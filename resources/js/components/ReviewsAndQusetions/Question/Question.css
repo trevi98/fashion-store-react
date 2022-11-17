@@ -1,0 +1,58 @@
+.rev-que .questions .question {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #9f9f9f;
+    margin-top: 1rem;
+}
+.rev-que .questions .question h2 {
+    font-size: 20px;
+    color: var(--main-color);
+}
+.rev-que .questions .question .date {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    color: #9f9f9f;
+}
+.rev-que .questions .question .what {
+    color: var(--main-color);
+}
+.rev-que .questions .content {
+    display: flex;
+}
+.rev-que .questions .content .answer {
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+.rev-que .questions .content .name {
+    margin-right: 0.5rem;
+    color: rgba(254, 226, 67, 0.8);
+}
+.rev-que .questions .content .text {
+    color: var(--main-color);
+    font-size: 18px;
+}
+.rev-que .questions button {
+    background-color: var(--main-color);
+    padding: 1rem 2rem;
+    font-size: 20px;
+    color: rgba(254, 226, 67, 0.8);
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+@media screen and (max-width: 600px) {
+    .rev-que .questions button {
+        padding: 1rem 1rem;
+        font-size: 18px;
+    }
+    .rev-que .questions .content {
+        flex-direction: column;
+    }
+    .rev-que .questions .content .text {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .rev-que .questions .content .text {
+        font-size: 14px;
+    }
+}

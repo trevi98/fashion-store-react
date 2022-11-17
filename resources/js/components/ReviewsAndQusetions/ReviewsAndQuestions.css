@@ -1,0 +1,114 @@
+.rev-que {
+    position: relative;
+}
+.rev-que .title {
+    position: relative;
+    display: flex;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--second-color);
+    color: #9f9f9f;
+}
+.rev-que .title h2 {
+    color: #9f9f9f;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    font-size: 24px;
+    position: relative;
+    top: 1px;
+}
+.rev-que .questions {
+    display: flex;
+    flex-direction: column;
+}
+.rev-que .questions .ask {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+    width: fit-content;
+    align-items: center;
+    cursor: pointer;
+}
+.rev-que .questions .ask p {
+    background-color: #000000;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.rev-que .questions .ask h4 {
+    font-size: 22px;
+}
+.rev-que .questions hr {
+    height: 1px;
+    background-color: #9f9f9f;
+}
+.rev-que .reviews {
+    display: flex;
+    flex-direction: column;
+}
+.rev-que .reviews .all-rate {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-bottom: 3rem;
+}
+.rev-que .reviews .all-rate h4 {
+    font-size: 22px;
+    margin-bottom: 0.2rem;
+}
+.rev-que .reviews .all-rate .rate {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.2rem;
+    justify-content: space-between;
+}
+.rev-que .reviews .all-rate p {
+    margin-bottom: 1rem;
+    font-size: 17px;
+}
+.rev-que .reviews .all-rate button {
+    background-color: var(--main-color);
+    color: rgba(254, 226, 67, 0.8);
+    align-self: flex-start;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.rev-que .show {
+    width: 100%;
+    margin: 2rem auto;
+    text-align: center;
+}
+.rev-que .show button {
+    background-color: var(--main-color);
+    padding: 1rem 2rem;
+    color: rgba(254, 226, 67, 0.8);
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+@media screen and (max-width: 600px) {
+    .rev-que .title {
+        justify-content: space-around;
+    }
+    .rev-que .show button {
+        padding: 1rem 1rem;
+        font-size: 18px;
+    }
+    .rev-que .title h2 {
+        font-size: 22px;
+    }
+    .rev-que .questions .ask h4 {
+        font-size: 18px;
+    }
+}

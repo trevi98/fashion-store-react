@@ -1,0 +1,138 @@
+form .card {
+    direction: rtl;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+.font-arabic {
+    font-family: 'Tajawal', sans-serif !important; 
+}
+
+[data-testid="resource-table"] {
+    direction: rtl;
+}
+
+th > span > svg {
+    margin-left: 0 !important;
+    margin-right: .5rem !important;
+}
+
+.card > .flex.items-center.py-3.border-b.border-50 {
+    direction: rtl;
+}
+
+
+v-popover.ml-auto {
+    margin-left: auto;
+}
+
+.ml-auto {
+    margin-left: 0 !important;
+    margin-right: auto;
+}
+
+.ml-2 {
+    margin-left: 0 !important;
+    margin-right: 0.5rem;
+}
+
+.mr-4 {
+    margin-right: 0 !important;
+    margin-left: 1rem;
+}
+
+.sidebar-icon {
+    margin-right: 0rem !important;
+    margin-left: 0.75rem !important;
+}
+
+.mr-6 {
+    margin-right: 0rem !important;
+    margin-left: 1.5rem !important;
+}
+
+.mr-3 {
+    margin-right: 0rem !important;
+    margin-left: .75rem !important;
+}
+
+.mr-2 {
+    margin-right: 0rem !important;
+    margin-left: .5rem !important;
+}
+
+.pl-search {
+    padding-left: 0 !important;
+    padding-right: 2.75rem !important;
+}
+
+.ml-3 {
+    margin-right: .75rem !important;
+    margin-left: 0 !important;
+}
+
+
+[x-placement="bottom-start"] {
+    left: 100px !important;
+}
+
+[x-placement="bottom-end"] {
+    left: -160px !important;
+}
+
+
+[x-placement="bottom-start"] > div > div > div > div:nth-child(1) {
+    width: 200px !important;
+}
+
+.toasted-container.bottom-right {
+    left: 5% !important;
+    right: unset !important;
+}
+
+.vue-star-rating {
+    justify-content: flex-end;
+    direction: ltr;
+}
+
+.text-left {
+    text-align: right !important;
+}
+
+.rounded-l-lg {
+    border-top-right-radius: .5rem;
+    border-top-left-radius: 0rem !important;
+}
+
+.rounded-b-lg, .rounded-l-lg {
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: 0rem !important;
+}
+
+.rounded-l-none {
+    border-top-left-radius: .5rem !important;
+    border-bottom-left-radius: .5rem !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+
+@media (max-width: 992px) {
+    html:not([dir="rtl"]) div[dusk$='index-component'] .btn[dusk='create-button']::before, html:not([dir="rtl"]) div[dusk$='index-component'] .btn[dusk='attach-button']::before {
+        margin-right: 0px !important;
+        margin-left: 20px !important;
+    }
+
+    html:not([dir="rtl"]) .hamburger-menu {
+        margin-right: 0rem !important;
+        margin-left: 1rem !important;
+    }
+
+    [x-placement="bottom-start"] > div > div > div > div:nth-child(1) {
+        width: 130px !important;
+    }
+
+    [x-placement="bottom-end"] {
+        left: -190px !important;
+    }
+}
