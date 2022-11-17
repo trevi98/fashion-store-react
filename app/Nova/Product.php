@@ -66,7 +66,7 @@ class Product extends Resource
             Flexible::make('صور المنتج', 'imgs')
             ->addLayout('صورة', 'img', [
                 Image::make('', 'image'),
-            ])->button('إضافة صورة')->limit(5),
+            ])->button('إضافة صورة')->limit(10),
             Flexible::make('خصائص المنتج', 'atts')
             ->addLayout('خاصّة', 'att', [
                 Select::make('الخاصّة','title')->options($attributes)->rules('required'),
