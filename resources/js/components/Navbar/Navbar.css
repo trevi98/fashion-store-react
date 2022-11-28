@@ -1,0 +1,216 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    flex-direction: column;
+}
+.nav .container {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1;
+    width: 100%;
+}
+.nav .container .image img {
+    width: 70%;
+}
+.nav .container .lg-my {
+    display: flex;
+    flex: 0.2;
+    margin-top: 1rem;
+    color: var(--main-color);
+}
+.nav .container .lg-my .lang,
+.nav .res-en .lg-my .lang {
+    display: flex;
+    cursor: pointer;
+    flex: 0.5;
+}
+.nav .container .lg-my .dol,
+.nav .res-en .lg-my .dol {
+    display: flex;
+    flex: 0.5;
+    cursor: pointer;
+}
+
+.nav .container .lang img,
+.nav .res-en .lg-my .lang img {
+    width: 26px;
+    height: 21px;
+}
+
+.nav .container .image {
+    flex: 0.6;
+    text-align: center;
+}
+
+.nav .container .icons {
+    flex: 0.2;
+    display: flex;
+    font-size: 27px;
+    color: var(--main-color);
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.nav .container .icons .icon-container {
+    position: relative;
+}
+.nav .container .icon-container .amount-counter {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: #fee243;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav .container .icon-container p {
+    font-size: 12px;
+    color: #fff;
+}
+.nav .container .icons > * {
+    cursor: pointer;
+}
+.nav .container .search {
+    position: relative;
+}
+.nav .container .search input {
+    position: absolute;
+    border: 1px solid #000000;
+    border-radius: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    right: -60px;
+    width: 150px;
+    top: 35px;
+}
+.nav .info ul {
+    display: flex;
+    list-style: none;
+}
+.nav .res-en {
+    width: 100%;
+}
+.nav .res-en .lg-my {
+    display: none;
+}
+.nav .info ul li {
+    margin: 0 1rem;
+}
+.nav .container .menu {
+    display: none;
+    margin-left: 1rem;
+    position: relative;
+    flex: 0.2;
+    margin-top: 1rem;
+}
+.nav .container .menu svg {
+    cursor: pointer;
+}
+.nav .container .menu .nav__menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    margin-top: 1rem;
+    background-color: #2120205e;
+    border-radius: 5px;
+    padding: 2rem;
+    text-align: end;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+    min-width: 230px;
+}
+.nav .title {
+    text-align: center;
+    font-size: 20px;
+    color: var(--main-color);
+    margin-top: 2rem;
+}
+@media screen and (max-width: 900px) {
+    .nav .container .lg-my {
+        display: none;
+    }
+    .nav .title {
+        font-size: 18px;
+    }
+    .nav .container .icons > *:not(:first-child) {
+        display: none;
+    }
+    .nav .info ul {
+        display: none;
+    }
+    .nav .container .menu {
+        display: block;
+    }
+    .nav .container .menu .nav__menu_container .links_menu .info ul {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    .nav .container .menu .nav__menu_container .links_menu .info ul li {
+        margin: 0.5rem 0;
+    }
+    .nav
+        .container
+        .menu
+        .nav__menu_container
+        .links_menu
+        .icons
+        > *:not(:first-child) {
+        display: flex;
+    }
+    .nav
+        .container
+        .menu
+        .nav__menu_container
+        .links_menu
+        .icons
+        > *:first-child {
+        display: none;
+    }
+    .nav .res-en .lg-my {
+        display: flex;
+        justify-content: space-around;
+    }
+    .nav .res-en .lg-my .lang,
+    .nav .res-en .lg-my .dol {
+        flex: 0;
+    }
+}
+@media screen and (max-width: 660px) {
+    .nav .container .menu .nav__menu_container .links_menu .info ul {
+        font-size: 10px;
+    }
+    .nav .title {
+        font-size: 16px;
+    }
+    .home .links svg {
+        width: 20px;
+        align-self: center;
+    }
+    .nav .res-en .lg-my {
+        font-size: 14px;
+        padding-top: 1rem;
+    }
+    .res-en .lg-my .lang img {
+        width: 23px;
+        height: 18px;
+        align-self: center;
+    }
+    .nav .container .icons {
+        font-size: 20px;
+    }
+    .nav .container .icons .search svg {
+        margin-top: 5px;
+    }
+    .nav .container .search input {
+        padding: 0.5rem 0.75rem;
+        right: -65px;
+        z-index: -1;
+        width: 100px;
+    }
+}

@@ -1,0 +1,74 @@
+.rev-que .reviews .answer {
+    display: flex;
+    border-bottom: 1px solid #9f9f9f;
+    padding-bottom: 1.5rem;
+    margin-top: 1rem;
+}
+.rev-que .reviews .answer .info {
+    display: flex;
+    margin-right: 1rem;
+    width: 15%;
+    flex: 15%;
+}
+.rev-que .reviews .answer .info .userNmae {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--second-color);
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.rev-que .reviews .answer .info .content {
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+}
+.rev-que .reviews .answer .info .content .detailes {
+    display: flex;
+    width: 100%;
+}
+.rev-que .reviews .answer .info .content .detailes .name {
+    color: var(--main-color);
+    margin-right: 0.5rem;
+}
+.rev-que .reviews .answer .info .content .detailes .date {
+    color: #9f9f9f;
+}
+.rev-que .reviews .answer .info .name .detailes p:first-child {
+    margin-right: 0.5rem;
+}
+.rev-que .reviews .answer .info .content .rate {
+    font-size: 25px;
+}
+.rev-que .reviews .answer .text {
+    width: 85%;
+    font-size: 20px;
+    color: var(--second-color);
+    margin-left: 1rem;
+}
+@media screen and (max-width: 800px) {
+    .rev-que .reviews .answer .info .content {
+        font-size: 20px;
+    }
+    .rev-que .reviews .answer .info .content .rate {
+        font-size: 23px;
+    }
+    .rev-que .reviews .answer .text {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .rev-que .reviews .answer {
+        flex-direction: column;
+    }
+    .rev-que .reviews .answer .text {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 600px) {
+    .rev-que .title {
+        justify-content: space-around;
+    }
+    .rev-que .reviews .answer .text {
+        font-size: 16px;
+    }
+}

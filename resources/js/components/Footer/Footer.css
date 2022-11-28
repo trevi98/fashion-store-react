@@ -1,0 +1,140 @@
+.footer {
+    display: flex;
+    padding: 1rem 4rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.footer .info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: self-start;
+}
+.footer .info .image {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 4rem;
+    flex: 50%;
+}
+
+.footer .info .image img {
+    width: 100%;
+}
+.footer .info .image p {
+    font-size: 16px;
+    text-align: center;
+    counter-reset: var(--main-color);
+}
+.footer .info .links {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex: 100%;
+    flex-wrap: wrap;
+}
+.footer .info .links .link {
+    width: calc(100% / 3);
+    padding-top: 2rem;
+}
+.footer .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+.footer .icons .buy {
+    display: flex;
+    margin: 2rem 0;
+}
+.footer .icons .buy .inst {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    padding: 0.25rem 0.5rem;
+    justify-content: space-between;
+    border-radius: 5px;
+    max-width: 160px;
+    margin: 0rem 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+.footer .icons .buy .inst .content {
+    display: flex;
+    flex-direction: column;
+}
+.footer .icons .buy .inst .content p {
+    font-size: 14px;
+}
+.footer .icons .buy .inst .content span {
+    font-size: 18px;
+}
+.footer .icons .social {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 160px;
+}
+.footer .icons .social > * {
+    cursor: pointer;
+}
+.footer h3 {
+    font-size: 16px;
+    counter-reset: var(--main-color);
+    margin-bottom: 1rem;
+}
+.footer ul {
+    list-style: none;
+}
+.footer ul li {
+    font-size: 13px;
+    color: var(--second-color);
+    margin: 0.5rem 0;
+}
+@media screen and (max-width: 900px) {
+    .footer .info {
+        flex-direction: column;
+    }
+    .footer .info .image {
+        padding-right: 0;
+    }
+    .footer .info .image img {
+        width: 70%;
+        margin: auto;
+    }
+    .footer .info .links .link {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 750px) {
+    .footer .info .links .link {
+        width: calc(100% / 2);
+    }
+}
+@media screen and (max-width: 600px) {
+    .footer .icons .buy {
+        flex-direction: column;
+    }
+    .footer .info .links .link {
+        width: 100%;
+    }
+    .footer .icons .buy .inst {
+        margin: 1rem 0;
+    }
+    .footer .icons .buy .inst .content p {
+        font-size: 12px;
+    }
+    .footer .icons .buy .inst .content span {
+        font-size: 15px;
+    }
+    .footer h3 {
+        font-size: 14px;
+    }
+    .footer ul li {
+        font-size: 12px;
+    }
+}

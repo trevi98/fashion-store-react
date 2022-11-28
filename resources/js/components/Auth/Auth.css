@@ -1,0 +1,89 @@
+.auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 4rem 8rem;
+}
+.auth form {
+    display: flex;
+    flex-direction: column;
+}
+.auth form .input {
+    display: flex;
+    flex-direction: column;
+}
+.auth form .input label {
+    font-size: 20px;
+    margin-bottom: 0.25rem;
+}
+.auth form .checkbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.auth form .checkbox input {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.auth form .input input {
+    border: 1px solid var(--main-color);
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.auth form .submit {
+    font-size: 28px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+
+    color: rgba(254, 226, 67, 0.8);
+}
+.auth form p {
+    margin: 1rem 0;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.auth .info {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.auth .info p {
+    font-size: 15px;
+}
+.auth .info span {
+    font-size: 15px;
+}
+.auth .info .google {
+    margin: 1rem 0;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+    padding: 1rem 0.5rem;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.auth .info .google svg {
+    margin-right: 1rem;
+    font-size: 24px;
+}
+@media screen and (max-width: 800px) {
+    .auth .info .google,
+    .auth .info .submit {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .auth .info .google,
+    .auth .info .submit {
+        font-size: 18px;
+    }
+}

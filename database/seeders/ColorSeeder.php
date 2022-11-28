@@ -17,7 +17,7 @@ class ColorSeeder extends Seeder
         //
 
 
-    DB::table('colors')->insert([
+DB::table('colors')->insert([
     'title' => 'aliceblue' ,
     'hex' => '#F0F8FF'
     ]);

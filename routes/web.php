@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('temp');
+});
+Route::get('/prod', function () {
     return view('welcome');
 });

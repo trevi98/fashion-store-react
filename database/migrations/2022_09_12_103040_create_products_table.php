@@ -19,12 +19,10 @@ class CreateProductsTable extends Migration
             $table->string('title');
             $table->text('description')->nullable();
             $table->text('cover');
-            $table->text('video')->nullable();
             $table->longText('imgs')->nullable();
             $table->longText('atts')->nullable();
             $table->string('price');
             $table->integer('show')->default(1);
-            $table->integer('quantity');
             $table->integer('featured')->default(0);
             $table->foreignId('sub_category_id')->constrained()->onDelete('cascade');
             $table->foreignId('color_id')->constrained()->onDelete('cascade');

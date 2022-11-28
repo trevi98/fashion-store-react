@@ -1,0 +1,40 @@
+.showMore {
+    padding: 2rem 0;
+}
+.showMore .title-showMore {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+}
+.showMore .title-showMore h2 {
+    color: var(--main-color);
+    font-size: 29px;
+}
+.showMore .title-showMore button {
+    color: var(--main-color);
+    font-size: 14px;
+    border: 1px solid #d8d8d8;
+    border-radius: 10px;
+    padding: 0.75rem;
+    border-radius: 4px;
+}
+@media screen and (max-width: 900px) {
+    .showMore .title-showMore h2 {
+        font-size: 25px;
+    }
+}
+@media (max-width: 600px) {
+    .showMore .title-showMore h2 {
+        font-size: 22px;
+    }
+}
+@media (max-width: 600px) {
+    .showMore .title-showMore {
+        flex-direction: column;
+    }
+    .showMore .title-showMore button {
+        width: fit-content;
+        margin-top: 1rem;
+    }
+}

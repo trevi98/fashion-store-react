@@ -1,0 +1,80 @@
+.cart {
+    padding: 2rem 4rem;
+    width: 80%;
+    margin: auto;
+    overflow-x: auto;
+}
+.cart table {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.5019607843137255);
+    border-spacing: 0;
+}
+.cart table thead tr td {
+    text-align: center;
+    padding: 1rem;
+}
+.cart table tbody {
+    position: relative;
+}
+.cart table tbody .exit {
+    position: absolute;
+    top: 50%;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    width: 0px;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transform: translateY(-50%);
+    padding: 0.5rem;
+}
+
+.cart table tbody tr td {
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5019607843137255);
+    border-top: 1px solid rgba(0, 0, 0, 0.5019607843137255);
+    padding: 0.5rem 0;
+    position: relative;
+}
+.cart table tbody tr td img {
+    width: 120px;
+    vertical-align: middle;
+    margin-left: 1.5rem;
+}
+
+.cart table tr td {
+    padding: 0.5rem 0;
+    text-align: center;
+}
+.cart table tr td button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+.cart table tr td .coupon {
+    border: 1px solid rgba(0, 0, 0, 0.5019607843137255);
+    color: rgba(0, 0, 0, 0.4);
+}
+.cart table tr td .applay {
+    background-color: var(--main-color);
+    color: rgba(254, 226, 67, 0.8);
+}
+@media screen and (max-width: 1100px) {
+    .cart table .footer-button {
+        display: flex;
+        flex-direction: column;
+    }
+    .cart table .footer-button td button {
+        font-size: 12px;
+        padding: 0.5rem;
+    }
+    .cart table tbody .exit {
+        left: -0.8rem;
+    }
+}
