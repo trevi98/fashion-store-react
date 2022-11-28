@@ -1,0 +1,74 @@
+.card {
+    align-items: center;
+    flex: 250%;
+    max-width: 25%;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+}
+.card .content {
+    font-size: 17px;
+}
+.card img {
+    width: 100%;
+}
+.card .info {
+    display: flex;
+    padding: 0.125rem 0;
+    align-items: center;
+}
+.card .info .price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.card .info .price h4 {
+    color: var(--main-color);
+    margin-right: 0.5rem;
+}
+.card .info .price p {
+    color: rgba(0, 0, 0, 0.5019607843137255);
+    text-decoration-line: line-through;
+}
+.card .rating {
+    align-items: center;
+    display: flex;
+}
+.card .rating .dv-star-rating-full-star {
+    color: rgba(254, 226, 67, 0.8);
+}
+.card .rating p {
+    margin-left: 0.5rem;
+    color: var(--main-color);
+    width: 50%;
+}
+.card .add button {
+    background-color: var(--main-color);
+    color: rgba(254, 226, 67, 0.8);
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 1000px) {
+    .card .content {
+        font-size: 14px;
+    }
+    .card .add button {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .card {
+        max-width: 50%;
+        flex: 50%;
+    }
+}
+@media (max-width: 600px) {
+    .card {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
